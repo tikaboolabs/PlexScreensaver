@@ -1,0 +1,18 @@
+# Xcode
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+build/
+*.xcworkspace/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Build artifacts
+*.saver
+*.dSYM
+
+# Secrets - never commit tokens
+*.plist.bak

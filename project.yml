@@ -1,0 +1,28 @@
+name: PlexScreensaver
+options:
+  bundleIdPrefix: com.jasonbarton
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+targets:
+  PlexScreensaver:
+    type: bundle
+    platform: macOS
+    sources:
+      - path: PlexScreensaver
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jasonbarton.PlexScreensaver
+        PRODUCT_NAME: PlexScreensaver
+        INFOPLIST_FILE: PlexScreensaver/Info.plist
+        WRAPPER_EXTENSION: saver
+        COMBINE_HIDPI_IMAGES: true
+        ENABLE_APP_SANDBOX: false
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks"
+        OTHER_LDFLAGS: "-framework ScreenSaver -framework Metal"
